@@ -1,0 +1,17 @@
+#python circle
+class  circle:
+  def __init__ (self, pie ,radius):
+    self.pie = pie
+    self.radius =radius
+  def area(self):
+     a= self.pie* self.radius
+     return a
+    
+  def perimeter(self):
+     p= self.pie * self.radius*2
+     return p
+# object - instance of a class
+circle= circle(3.142, 7)
+print(circle.area())
+print(circle.perimeter())
+

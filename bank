@@ -1,0 +1,37 @@
+class BankAccount:
+    def __init__(self, account_number, customer_name, date_of_opening):
+        self.account_number = account_number
+        self.customer_name = customer_name
+        self.date_of_opening = date_of_opening
+        self.balance = 0
+
+    def deposit(self, amount):  
+        """Deposits the given amount into the account."""
+        self.balance += amount
+        print(f"Deposited ${amount}. New balance: ${self.balance:.2f}")
+
+    def withdraw(self, amount):
+        """Withdraws the specified amount from the account."""
+        if self.balance >= amount:
+            self.balance -= amount
+            print(f"Withdrew ${amount}. New balance: ${self.balance:.2f}")
+        else:
+            print("Insufficient balance.")
+
+    def check_balance(self):
+        """Prints the current account balance."""
+        print(f"Current balance: ${self.balance:.2f}")
+
+    def customer_details(self):
+        """Prints customer information."""
+        print(f"Customer Name: {self.customer_name}")
+        print(f"Account Number: {self.account_number}")
+        print(f"Date of Opening: {self.date_of_opening}")
+        print(f"Balance: ${self.balance:.2f}")
+
+# Example usage:
+account = Bankaccount(account_number="123456", customer_name="John Doe", date_of_opening="2024-06-23")
+account.deposit(1000)
+account.withdraw(300)
+account.check_balance()
+account.customer_details()

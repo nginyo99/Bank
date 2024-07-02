@@ -1,0 +1,12 @@
+# PYTHON CLASS AND OBJECTS
+class rectangle:
+#constructructor -init instance varibles
+ def __init__(self, length, width):
+    self.length = length
+    self.width = width
+ def area(self):
+     a= self.length* self.width
+     return a
+# object - instance of a class
+rect = rectangle(15, 11)
+print(rect.area())
